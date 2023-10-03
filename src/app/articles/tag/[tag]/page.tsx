@@ -14,6 +14,22 @@ interface Post {
   mdx: ReactElement
 }
 
+export async function generateStaticParams() {
+  // const posts = await fetch(
+  //   'https://.../content'
+  // ).then(res => res.json())
+
+  return [
+    {
+      tag: 'non-technical'
+    },
+    { tag: 'techical' },
+    { tag: 'defi' },
+    { tag: 'solidity' },
+    { tag: 'economics' }
+  ]
+}
+
 export default function Tag({
   params
 }: {
